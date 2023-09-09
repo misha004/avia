@@ -14,94 +14,146 @@
    <!-- header -->
    <header class="header">
       <div class="container">
-         <a class="header__logo" href="#"><img src="images/Logo.svg" alt=""> </a> 
+         <a class="header__logo" href="#">
+<!--            Стоит всегда прописывать alt, вдруг картинка не загрузится, так будет хотя бы текст(тоже так себе, но лучше чем ничего)-->
+<!--            Предлагаю написать в alt логотип-->
+            <img src="images/Logo.svg" alt="" />
+         </a>
       </div>
    </header>
 
    <!-- main -->
    <div class="container">
       <main class="main">
+<!--         Нейминг очень важен, предлагаю поменять название на transfers_filter -->
+<!--         вместо nav, т.к.этот блок выполнял бы ф-ции фильтрации-->
          <section class="nav">
+<!--            Лучше просто использовать div, а не nav тэг, т.к. это не навигация, nav логичнее использовать в меню/ссылка хедере-->
+<!--            Судя по всему ты использовал малый бэм, хорошо, но кажется использовал не совсем так. Основная суть-->
+<!--            БЭМ блок__элемент--модификатор, т.е. правильнее было бы написать nav-menu-->
                <nav class="nav__menu">
+<!--                  а тут написать nav-menu__title, а если бы у тебя был рядом точно такой же заголовок но красного цвета, -->
+<!--                  то стоило бы написать nav-menu__title--red-->
+<!--                  Можно для кругазора почитать тут https://ru.bem.info/methodology/quick-start/, но заучивать я не стал бы,-->
+<!--                  сейчас мало кто использует его-->
                   <h3 class="nav__menu-title">Количество пересадок</h3>
+
                   <ul class="nav__menu-list">
                      <li class="nav__menu-list--item">
                         <label class="nav__menu-list--check" for="1">
-                           <input class="nav__menu-list--input"   type="checkbox" id="1">
-                           <span class="nav__menu-list--checkbox"></span>Все
+                           Все
+
+                           <input class="nav__menu-list--input" type="checkbox" id="1">
+
+                           <span class="nav__menu-list--checkbox"></span>
                         </label>
                      </li>
+
                      <li class="nav__menu-list--item">
                         <label class="nav__menu-list--check" for="2">
-                           <input class="nav__menu-list--input" checked  type="checkbox" id="2">
-                           <span class="nav__menu-list--checkbox"></span>Без пересадок
+                           Без пересадок
+
+                           <input class="nav__menu-list--input" checked type="checkbox" id="2">
+
+                           <span class="nav__menu-list--checkbox"></span>
                         </label>
                      </li>
+
                      <li class="nav__menu-list--item">
                         <label class="nav__menu-list--check" for="3">
+                           1 пересадка
+
                            <input class="nav__menu-list--input" type="checkbox" id="3">
-                           <span class="nav__menu-list--checkbox"></span>1 пересадка
+
+                           <span class="nav__menu-list--checkbox"></span>
                         </label>
                      </li>
+
                      <li class="nav__menu-list--item">
                         <label class="nav__menu-list--check" for="4">
+                           2 пересадки
+
                            <input class="nav__menu-list--input" type="checkbox" id="4">
-                           <span class="nav__menu-list--checkbox"></span>2 пересадки
+
+                           <span class="nav__menu-list--checkbox"></span>
                         </label>
                      </li>
+
                      <li class="nav__menu-list--item">
                         <label class="nav__menu-list--check" for="5">
-                              <input class="nav__menu-list--input" type="checkbox" id="5">
-                              <span class="nav__menu-list--checkbox"></span>3 пересадки
+                           3 пересадки
+
+                           <input class="nav__menu-list--input" type="checkbox" id="5">
+
+                           <span class="nav__menu-list--checkbox"></span>
                         </label>
                      </li>
                   </ul>
                </nav>
          </section>
-            
+
+<!--         Я бы назвал filters-ticket-type-->
          <section class="features">
             <ul class="features__list">
                <li class="features__list-item">
+<!--                  Правильнее будет использовать тут input с типом radio. Ссылки логично использовать когда мы кидаем на-->
+<!--                  другую страницу, тут бы при клике, у нас происходила бы фильтрация билетов. Попробуй сверстать с радио-->
                   <a class="features__list-item--link" href="">Самый дешевый</a>
                </li>
+
                <li class="features__list-item">
                   <a class="features__list-item--link" href="">Самый быстрый</a>
                </li>
+
                <li class="features__list-item">
                   <a class="features__list-item--link" href="">Оптимальный</a>
                </li>
             </ul>
 
+<!--            С билетами хорошо сделал-->
             <div class="ticket">
                <div class="ticket__main">
                   <h3 class="ticket__main-title">13 400 Р</h3>
+
                   <img src="images/S7 Logo.svg" alt="Logo">
                </div>
+
                <div class="ticket__text">
                   <div class="ticket__text-block">
                      <span class="ticket__text-item--name">MOW – HKT</span>
+<!--                     Ставлю пробелы между элементами одной вложенности, т.к. так легче читать-->
                      <p class="ticket__text-item--text">10:45 – 08:00</p>
-                  </div>   
+                  </div>
+
                   <div class="ticket__text-block">
                      <span class="ticket__text-item--name">В пути</span>
+
                      <p class="ticket__text-item--text">21ч 15м</p>
-                  </div>   
+                  </div>
+
                   <div class="ticket__text-block">
                      <span class="ticket__text-item--name ">2 пересадки</span>
+
                      <p class="ticket__text-item--text">HKG, JNB</p>
                   </div>
                </div>
+
                <div class="ticket__text">
                   <div class="ticket__text-block">
                      <span class="ticket__text-item--name">MOW – HKT</span>
+
                      <p class="ticket__text-item--text">10:45 – 08:00</p>
-                  </div>   
+                  </div>
+
                   <div class="ticket__text-block">
                      <span class="ticket__text-item--name">В пути</span>
+
                      <p class="ticket__text-item--text">21ч 15м</p>
-                  </div>   
+                  </div>
+
                   <div class="ticket__text-block">
                      <span class="ticket__text-item--name ">2 пересадки</span>
+
                      <p class="ticket__text-item--text">HKG, JNB</p>
                   </div>
                </div>
@@ -246,7 +298,8 @@
                   </div>
                </div>
             </div>
-            
+
+<!--            type="submit" лишний-->
             <button class="ticket__btn" type="submit">
                Показать еще 5 билетов!
             </button>
@@ -255,3 +308,8 @@
    </div>
 </body>
 </html>
+
+<!--Когда будешь правки делать, разбивай на маленкие коммиты.-->
+<!--Например поправил фильтр пересадок, закоммитил, написал, поправил блок с пересдаками. Т.к. будет легче проверять.-->
+<!--+ Лучше отводить для отдельного блока свою ветку и потом кидать МР в master, так будет легче смотреть изменения-->
+<!--Писать понятные сообщения в коммите, очень важно. Чтобы понять что было доавблено, или что могло сломать-->
