@@ -5,34 +5,35 @@ body{
    background-color: #F3F7FA;
 }
 
-.header{
+.header {
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 50px 347px;
+   margin: 50px 0; 
+   /* Поменял padding на margin */
 }
 
-.container{
+.container {
    max-width: 754px;
    margin: 0 auto;
 }
 
-.main{
+.main {
    display: flex;
    justify-content: space-between;
 }
 
-.nav{
+.transfers-filter {
    width: 232px;
    height: 252px;
    border-radius: 5px;
    background-color: #fff;
-   padding: 20px 0 20px 20px;
+   padding: 20px 0 0 20px;
    box-shadow: 0px 2px 8px 0px #0000001A;
    margin-right: 20px;
 }
 
-.nav__menu-title{
+.nav-menu__title {
    font-size: 12px;
    font-weight: 600;
    line-height: 12px;
@@ -41,60 +42,56 @@ body{
    margin-bottom: 10px;
 }
 
-.nav__menu-list--item{
+.nav-menu__list--check {
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: flex-end;
+   align-items: center;
+   font-size: 13px;
+   font-weight: 400;
+   line-height: 20px;
+   color: #4A4A4A;
+   padding: 10px 0 10px 50px;
    margin-left: -20px;
-   padding: 10px;
 }
 
-.nav__menu-list--item:last-child{
-   padding-bottom: 21px;
-   border-radius: 5px;
-}
-
-
-.nav__menu-list--item:hover{
+.nav-menu__list--check:hover {
    cursor: url(../images/Cursor.svg), auto;
    background-color: #F1FCFF;
    transition: .2s;
 }
 
-
-.nav__menu-list--check{
-   font-size: 13px;
-   font-weight: 400;
-   line-height: 20px;
-   color: #4A4A4A;
-   padding-left: 3.1em;
+.last {
+   padding: 10px 0 20px 50px;
+   border-radius: 5px;
 }
 
-.nav__menu-list--check:hover{
-   cursor: url(../images/Cursor.svg), auto;
-}
-
-.nav__menu-list--input{
+.nav-menu__list--input {
    -webkit-appearance: none;
    appearance: none;
    position: absolute;   
 }
 
-.nav__menu-list--checkbox{
+.nav-menu__list--checkbox {
    position: absolute;
    width: 20px;
    height: 20px;
    border-radius: 2px;
    border: 1px solid #DFE5EC;
-   margin-left: -2.4em;
    background-color: #fff;
-   
+   margin-left: -30px;
 }
 
-/* checked */
-.nav__menu-list--input:checked + .nav__menu-list--checkbox{
+.nav-menu__list--input:checked + .nav-menu__list--checkbox {
    background-image: url(../images/icons8-галочка-10.svg);
    background-repeat: no-repeat;
    border: 1px solid #2196F3;
    background-size: 100%;
 }
+
+
+
+
 
 
 .features{

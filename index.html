@@ -6,7 +6,7 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="css/stylee.css">
+   <link rel="stylesheet" href="css/globals.css">
    <link rel="stylesheet" href="css/style.css">
    <title>Aviasales</title>
 </head>
@@ -14,49 +14,70 @@
    <!-- header -->
    <header class="header">
       <div class="container">
-         <a class="header__logo" href="#"><img src="images/Logo.svg" alt=""> </a> 
+         <a class="header__logo" href="#">
+            <img src="images/Logo.svg" alt="Logo">
+         </a> 
       </div>
    </header>
 
    <!-- main -->
    <div class="container">
       <main class="main">
-         <section class="nav">
-               <nav class="nav__menu">
-                  <h3 class="nav__menu-title">Количество пересадок</h3>
-                  <ul class="nav__menu-list">
-                     <li class="nav__menu-list--item">
-                        <label class="nav__menu-list--check" for="1">
-                           <input class="nav__menu-list--input"   type="checkbox" id="1">
-                           <span class="nav__menu-list--checkbox"></span>Все
+         <section class="transfers-filter">
+               <div class="nav-menu">
+                  <h3 class="nav-menu__title">Количество пересадок</h3>
+                  <ul class="nav-menu__list">
+                     <li class="nav-menu__list--item">
+                        <label class="nav-menu__list--check" for="1">   
+                           Все
+
+                           <input class="nav-menu__list--input" checked type="checkbox" id="1">
+
+                           <span class="nav-menu__list--checkbox"></span>
                         </label>
                      </li>
-                     <li class="nav__menu-list--item">
-                        <label class="nav__menu-list--check" for="2">
-                           <input class="nav__menu-list--input" checked  type="checkbox" id="2">
-                           <span class="nav__menu-list--checkbox"></span>Без пересадок
+
+                     <li class="nav-menu__list--item">
+                        <label class="nav-menu__list--check" for="2">   
+                           Без пересадок
+
+                           <input class="nav-menu__list--input"  type="checkbox" id="2">
+
+                           <span class="nav-menu__list--checkbox"></span>
                         </label>
                      </li>
-                     <li class="nav__menu-list--item">
-                        <label class="nav__menu-list--check" for="3">
-                           <input class="nav__menu-list--input" type="checkbox" id="3">
-                           <span class="nav__menu-list--checkbox"></span>1 пересадка
+
+                     <li class="nav-menu__list--item">
+                        <label class="nav-menu__list--check" for="3">   
+                           1 пересадка
+
+                           <input class="nav-menu__list--input"  type="checkbox" id="3">
+
+                           <span class="nav-menu__list--checkbox"></span>
                         </label>
                      </li>
-                     <li class="nav__menu-list--item">
-                        <label class="nav__menu-list--check" for="4">
-                           <input class="nav__menu-list--input" type="checkbox" id="4">
-                           <span class="nav__menu-list--checkbox"></span>2 пересадки
+
+                     <li class="nav-menu__list--item">
+                        <label class="nav-menu__list--check" for="4">   
+                           2 пересадки
+
+                           <input class="nav-menu__list--input"  type="checkbox" id="4">
+
+                           <span class="nav-menu__list--checkbox"></span>
                         </label>
                      </li>
-                     <li class="nav__menu-list--item">
-                        <label class="nav__menu-list--check" for="5">
-                              <input class="nav__menu-list--input" type="checkbox" id="5">
-                              <span class="nav__menu-list--checkbox"></span>3 пересадки
+
+                     <li class="nav-menu__list--item">
+                        <label class="nav-menu__list--check last" for="5">   
+                           3 пересадки
+
+                           <input class="nav-menu__list--input"  type="checkbox" id="5">
+
+                           <span class="nav-menu__list--checkbox"></span>
                         </label>
                      </li>
                   </ul>
-               </nav>
+               </div>
          </section>
             
          <section class="features">
